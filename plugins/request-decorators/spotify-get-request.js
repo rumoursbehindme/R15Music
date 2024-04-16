@@ -1,1 +1,31 @@
-'use strict';const _0x4cf940=_0x4bd6;function _0x163b(){const _0x55186=['13193568hXntTR','22vMTlLF','30YtwIXT','102964SrWiwi','defineProperty','axios','__esModule','default','113073SlaAMv','5521538fouMqA','KmPPK','49234788UGNEMZ','spotifyGetRequest','25fvtUhe','1032426LqYdpl','81296nUqQvM','266JiWVGx','93kmGMjU','fastify-plugin'];_0x163b=function(){return _0x55186;};return _0x163b();}(function(_0x3fd7bd,_0x12801d){const _0x9a712=_0x4bd6,_0x151497=_0x3fd7bd();while(!![]){try{const _0x205b3d=-parseInt(_0x9a712(0x14c))/0x1*(parseInt(_0x9a712(0x145))/0x2)+parseInt(_0x9a712(0x142))/0x3*(-parseInt(_0x9a712(0x147))/0x4)+parseInt(_0x9a712(0x13e))/0x5*(-parseInt(_0x9a712(0x13f))/0x6)+parseInt(_0x9a712(0x141))/0x7*(-parseInt(_0x9a712(0x140))/0x8)+parseInt(_0x9a712(0x144))/0x9+parseInt(_0x9a712(0x146))/0xa*(-parseInt(_0x9a712(0x14d))/0xb)+parseInt(_0x9a712(0x13c))/0xc;if(_0x205b3d===_0x12801d)break;else _0x151497['push'](_0x151497['shift']());}catch(_0x38d5af){_0x151497['push'](_0x151497['shift']());}}}(_0x163b,0xbd224));function _0x4bd6(_0x307bdd,_0xa3c60b){const _0x163b45=_0x163b();return _0x4bd6=function(_0x4bd67f,_0x25d844){_0x4bd67f=_0x4bd67f-0x13b;let _0x56c530=_0x163b45[_0x4bd67f];return _0x56c530;},_0x4bd6(_0x307bdd,_0xa3c60b);}var __importDefault=this&&this['__importDefault']||function(_0x8791f1){const _0x3708fe=_0x4bd6;return _0x8791f1&&_0x8791f1[_0x3708fe(0x14a)]?_0x8791f1:{'default':_0x8791f1};};Object[_0x4cf940(0x148)](exports,'__esModule',{'value':!![]});const fastify_plugin_1=__importDefault(require(_0x4cf940(0x143))),axios_1=__importDefault(require(_0x4cf940(0x149))),spotifyGetRequestPlugin=async function spotifyGetRequestPlugin(_0x2171da){const _0x13f016=_0x4cf940,_0x10623d={'KmPPK':function(_0x25556f,_0x146835){return _0x25556f+_0x146835;}};_0x2171da['decorateRequest'](_0x13f016(0x13d),async function _0x4068d2(_0x4ab7ff){const _0x266e1b=_0x13f016;try{const {headers:_0x569517,url:_0x41b24e}=_0x4ab7ff;let _0x24bc68;if(_0x569517)_0x24bc68=_0x569517;else{const {tokenSet:{token_type:_0x2ce5b5,access_token:_0x3a7f7d}}=this['session'];_0x24bc68={'Authorization':_0x10623d[_0x266e1b(0x13b)](_0x10623d[_0x266e1b(0x13b)](_0x2ce5b5,'\x20'),_0x3a7f7d)};}return axios_1[_0x266e1b(0x14b)]['get'](_0x41b24e,{'headers':_0x24bc68});}catch(_0x934947){}});};exports[_0x4cf940(0x14b)]=(0x0,fastify_plugin_1[_0x4cf940(0x14b)])(spotifyGetRequestPlugin);
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const fastify_plugin_1 = __importDefault(require("fastify-plugin"));
+const axios_1 = __importDefault(require("axios"));
+const spotifyGetRequestPlugin = async function spotifyGetRequestPlugin(instance) {
+    instance.decorateRequest('spotifyGetRequest', async function spotifyGetRequest(options) {
+        try {
+            const { headers: requestHeaders, url } = options;
+            let headers;
+            if (requestHeaders) {
+                headers = requestHeaders;
+            }
+            else {
+                const { tokenSet: { token_type, access_token } } = this.session;
+                headers = {
+                    Authorization: token_type + ' ' + access_token
+                };
+            }
+            return axios_1.default.get(url, {
+                headers
+            });
+        }
+        catch (error) {
+            //
+        }
+    });
+};
+exports.default = (0, fastify_plugin_1.default)(spotifyGetRequestPlugin);

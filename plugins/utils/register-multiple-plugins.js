@@ -1,1 +1,19 @@
-'use strict';const _0x23b885=_0x305a;(function(_0x1dc3cf,_0x33f392){const _0x5a364e=_0x305a,_0x5cba09=_0x1dc3cf();while(!![]){try{const _0x15c28f=-parseInt(_0x5a364e(0x1e4))/0x1+-parseInt(_0x5a364e(0x1e2))/0x2*(parseInt(_0x5a364e(0x1e6))/0x3)+-parseInt(_0x5a364e(0x1e5))/0x4+-parseInt(_0x5a364e(0x1df))/0x5*(-parseInt(_0x5a364e(0x1d9))/0x6)+-parseInt(_0x5a364e(0x1db))/0x7+parseInt(_0x5a364e(0x1e3))/0x8+parseInt(_0x5a364e(0x1e0))/0x9;if(_0x15c28f===_0x33f392)break;else _0x5cba09['push'](_0x5cba09['shift']());}catch(_0x82b9f5){_0x5cba09['push'](_0x5cba09['shift']());}}}(_0x9150,0xbc5fc));var __importDefault=this&&this[_0x23b885(0x1da)]||function(_0x4f68c8){return _0x4f68c8&&_0x4f68c8['__esModule']?_0x4f68c8:{'default':_0x4f68c8};};Object[_0x23b885(0x1dd)](exports,_0x23b885(0x1de),{'value':!![]});const fastify_plugin_1=__importDefault(require('fastify-plugin')),registerMultiplePlugins=async function registerMultiplePlugins(_0x775bdf){const _0x1866f7=_0x23b885;_0x775bdf['decorate'](_0x1866f7(0x1dc),async function(_0xa5f132){const _0x1c1fc6=_0x1866f7;try{_0xa5f132[_0x1c1fc6(0x1e1)](async({plugin:_0x1a0912,options:_0x15e292})=>{await _0x775bdf['register'](_0x1a0912,_0x15e292);});}catch(_0x1dec42){throw new Error(_0x1dec42);}});};exports[_0x23b885(0x1d8)]=(0x0,fastify_plugin_1[_0x23b885(0x1d8)])(registerMultiplePlugins);function _0x305a(_0x1f37ba,_0xc680fc){const _0x915026=_0x9150();return _0x305a=function(_0x305a99,_0x2b2a20){_0x305a99=_0x305a99-0x1d8;let _0x3eaa6d=_0x915026[_0x305a99];return _0x3eaa6d;},_0x305a(_0x1f37ba,_0xc680fc);}function _0x9150(){const _0x47fddd=['defineProperty','__esModule','695PNLZZK','15538068oPGzRM','forEach','713948aRSLUX','12020376flYZdc','479021gpCjLW','4436864QniWeU','6pwwesO','default','50262QgiuMa','__importDefault','9237459OHzpgR','registerPlugins'];_0x9150=function(){return _0x47fddd;};return _0x9150();}
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const fastify_plugin_1 = __importDefault(require("fastify-plugin"));
+const registerMultiplePlugins = async function registerMultiplePlugins(instance) {
+    instance.decorate('registerPlugins', async function (plugins) {
+        try {
+            plugins.forEach(async ({ plugin, options }) => {
+                await instance.register(plugin, options);
+            });
+        }
+        catch (error) {
+            throw new Error(error);
+        }
+    });
+};
+exports.default = (0, fastify_plugin_1.default)(registerMultiplePlugins);

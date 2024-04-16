@@ -1,0 +1,22 @@
+{
+  "time": "2024-04-16 18:38:32.454",
+  "msg": "Registered Core Plugin."
+}{
+  "time": "2024-04-16 18:38:32.462",
+  "msg": "Registered Session Plugin."
+}{
+  "time": "2024-04-16 18:38:32.765",
+  "msg": "Registered Client Plugin."
+}{
+  "time": "2024-04-16 18:38:32.774",
+  "msg": "Registered Authentication Plugin."
+}{
+  "time": "2024-04-16 18:38:32.780",
+  "msg": "Registered API Plugin"
+}{
+  "time": "2024-04-16 18:38:32.792",
+  "msg": "Server listening at http://[::1]:3000"
+}{
+  "time": "2024-04-16 18:38:32.795",
+  "msg": "Server listening at http://127.0.0.1:3000"
+}

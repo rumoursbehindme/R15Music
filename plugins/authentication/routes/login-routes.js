@@ -1,1 +1,24 @@
-'use strict';const _0x1cc517=_0x1d05;function _0x3cee(){const _0x16efd0=['loginRoutes','oidcClient','__esModule','query','get','session','5710EQmLXh','uqUQd','tokenSet','1746tPQIxD','defineProperty','authenticated','callbackParams','2275719zAfNnE','eXkBX','2935072jEuHND','/login','10630100XqdBMW','1038296ALEKKJ','498kdXogB','getAuthorizationUrl','23544ZCWyZX','returnURL','6mNZKsG','redirect','addHook','38971aHecbe','handleCallback'];_0x3cee=function(){return _0x16efd0;};return _0x3cee();}function _0x1d05(_0x5e7be5,_0x2417d6){const _0x3cee51=_0x3cee();return _0x1d05=function(_0x1d0514,_0x3153a5){_0x1d0514=_0x1d0514-0x82;let _0x4d6f44=_0x3cee51[_0x1d0514];return _0x4d6f44;},_0x1d05(_0x5e7be5,_0x2417d6);}(function(_0x19a593,_0x1d060b){const _0x1c95b8=_0x1d05,_0x5d9487=_0x19a593();while(!![]){try{const _0x2989b5=-parseInt(_0x1c95b8(0x9a))/0x1*(parseInt(_0x1c95b8(0x97))/0x2)+-parseInt(_0x1c95b8(0x8d))/0x3+parseInt(_0x1c95b8(0x8f))/0x4+parseInt(_0x1c95b8(0x86))/0x5*(-parseInt(_0x1c95b8(0x93))/0x6)+parseInt(_0x1c95b8(0x92))/0x7+parseInt(_0x1c95b8(0x95))/0x8*(-parseInt(_0x1c95b8(0x89))/0x9)+parseInt(_0x1c95b8(0x91))/0xa;if(_0x2989b5===_0x1d060b)break;else _0x5d9487['push'](_0x5d9487['shift']());}catch(_0x4c9a72){_0x5d9487['push'](_0x5d9487['shift']());}}}(_0x3cee,0x629b4));Object[_0x1cc517(0x8a)](exports,_0x1cc517(0x82),{'value':!![]}),exports['loginRoutes']=void 0x0;async function loginRoutes(_0x135902){const _0x124f47=_0x1cc517,_0x3bd018={'JcOpx':'preHandler','uqUQd':_0x124f47(0x90),'eXkBX':'/callback'};_0x135902[_0x124f47(0x99)](_0x3bd018['JcOpx'],async(_0x42cf54,_0xcbf350)=>{const _0x349f10=_0x124f47;if(_0x42cf54['session']['authenticated']){const _0x17908e=_0x42cf54[_0x349f10(0x83)][_0x349f10(0x96)]??'/';return _0xcbf350[_0x349f10(0x98)](_0x17908e);}}),_0x135902[_0x124f47(0x84)](_0x3bd018[_0x124f47(0x87)],async(_0x401ab1,_0x5b49c9)=>{const _0x5380dc=_0x124f47,_0x5b0376=_0x401ab1['query'][_0x5380dc(0x96)]??'/';_0x5b49c9[_0x5380dc(0x98)](await _0x135902[_0x5380dc(0x94)]({'returnURL':_0x5b0376}));}),_0x135902[_0x124f47(0x84)](_0x3bd018[_0x124f47(0x8e)],async(_0x5edbd0,_0x568208)=>{const _0x5f2a94=_0x124f47,_0x599c0b=_0x135902[_0x5f2a94(0x9d)][_0x5f2a94(0x8c)](_0x5edbd0),_0x5c9c8d=await _0x135902[_0x5f2a94(0x9b)](_0x599c0b);_0x5edbd0[_0x5f2a94(0x85)][_0x5f2a94(0x8b)]=!![],_0x5edbd0[_0x5f2a94(0x85)][_0x5f2a94(0x88)]=_0x5c9c8d;const _0x36fa07=_0x599c0b['state']?JSON['parse'](atob(_0x599c0b['state']))[_0x5f2a94(0x96)]:'/';_0x568208[_0x5f2a94(0x98)](_0x36fa07);});}exports[_0x1cc517(0x9c)]=loginRoutes;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.loginRoutes = void 0;
+async function loginRoutes(instance) {
+    instance.addHook('preHandler', async (req, reply) => {
+        if (req.session.authenticated) {
+            const redirectUrl = req.query.returnURL ?? '/';
+            return reply.redirect(redirectUrl);
+        }
+    });
+    instance.get('/login', async (req, reply) => {
+        const returnURL = req.query.returnURL ?? '/';
+        reply.redirect(await instance.getAuthorizationUrl({ returnURL }));
+    });
+    instance.get('/callback', async (req, reply) => {
+        const params = instance.oidcClient.callbackParams(req);
+        const tokenset = await instance.handleCallback(params);
+        req.session.authenticated = true;
+        req.session.tokenSet = tokenset;
+        const redirectURL = params.state ? JSON.parse(atob(params.state)).returnURL : '/';
+        reply.redirect(redirectURL);
+    });
+}
+exports.loginRoutes = loginRoutes;

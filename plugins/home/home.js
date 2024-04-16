@@ -1,1 +1,35 @@
-'use strict';const _0x381f18=_0x1cf8;(function(_0xcfc58a,_0x96e0be){const _0x580d9e=_0x1cf8,_0x34204d=_0xcfc58a();while(!![]){try{const _0x117642=-parseInt(_0x580d9e(0x7d))/0x1*(parseInt(_0x580d9e(0x76))/0x2)+parseInt(_0x580d9e(0x81))/0x3+-parseInt(_0x580d9e(0x7a))/0x4+-parseInt(_0x580d9e(0x93))/0x5*(-parseInt(_0x580d9e(0x73))/0x6)+parseInt(_0x580d9e(0x89))/0x7+-parseInt(_0x580d9e(0x83))/0x8*(-parseInt(_0x580d9e(0x86))/0x9)+-parseInt(_0x580d9e(0x74))/0xa*(parseInt(_0x580d9e(0x8c))/0xb);if(_0x117642===_0x96e0be)break;else _0x34204d['push'](_0x34204d['shift']());}catch(_0x2b6d49){_0x34204d['push'](_0x34204d['shift']());}}}(_0x61ce,0x76ef0));var __importDefault=this&&this[_0x381f18(0x7c)]||function(_0x42b0c0){const _0x21fdfe=_0x381f18;return _0x42b0c0&&_0x42b0c0[_0x21fdfe(0x80)]?_0x42b0c0:{'default':_0x42b0c0};};function _0x61ce(){const _0x52e812=['kfzVc','\x27>Login</a>','__esModule','551958NaGugU','utf-8','16zeWUve','type','redirect','2823993QkLVGV','join','public','2919714KynEDa','session','zDPWf','136543ROFBeU','keZLD','homeModule','<p\x20style=\x27color:\x20red\x27>','fs/promises','text/html','send','1438755qLTaLn','/login','bpqOj','public/index.html','Ewwfy','readFile','default','xsADe','18dWgOFS','670sCzXGI','defineProperty','1523654hbrEoe','sendFile','get','cwd','44980yISlep','authenticated','__importDefault','1iCBMmT'];_0x61ce=function(){return _0x52e812;};return _0x61ce();}Object[_0x381f18(0x75)](exports,_0x381f18(0x80),{'value':!![]}),exports['homeModule']=void 0x0;const static_1=__importDefault(require('@fastify/static')),path_1=require('path'),promises_1=require(_0x381f18(0x90)),homeModule=async function homeModule(_0x74fe92){const _0x5aacf6=_0x381f18,_0x4e3238={'keZLD':_0x5aacf6(0x96),'xsADe':_0x5aacf6(0x82),'kfzVc':'index.html','zDPWf':_0x5aacf6(0x91),'bpqOj':_0x5aacf6(0x94),'Ewwfy':_0x5aacf6(0x88)};_0x74fe92['register'](static_1[_0x5aacf6(0x99)],{'root':(0x0,path_1[_0x5aacf6(0x87)])(process[_0x5aacf6(0x79)](),_0x4e3238[_0x5aacf6(0x97)]),'prefix':'/'}),_0x74fe92[_0x5aacf6(0x78)]('/',async(_0x5ba71a,_0x25fc3a)=>{const _0x5a6a19=_0x5aacf6;if(_0x5ba71a[_0x5a6a19(0x8a)][_0x5a6a19(0x7b)])try{const _0x36703a=await(0x0,promises_1[_0x5a6a19(0x98)])((0x0,path_1[_0x5a6a19(0x87)])(process['cwd'](),_0x4e3238[_0x5a6a19(0x8d)]),_0x4e3238[_0x5a6a19(0x9a)]);if(_0x36703a)return _0x25fc3a[_0x5a6a19(0x77)](_0x4e3238[_0x5a6a19(0x7e)]);}catch(_0x57d308){throw new Error(_0x57d308);}const {query:{returnURL:_0x437195,error:_0x15da64}}=_0x5ba71a;if(_0x15da64)return _0x25fc3a[_0x5a6a19(0x84)](_0x4e3238[_0x5a6a19(0x8b)])[_0x5a6a19(0x92)](_0x5a6a19(0x8f)+_0x15da64+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x27/login?returnURL='+(_0x437195??'/')+_0x5a6a19(0x7f));return _0x25fc3a[_0x5a6a19(0x85)](_0x4e3238[_0x5a6a19(0x95)]);});};function _0x1cf8(_0x1fd5df,_0x375865){const _0x61ce40=_0x61ce();return _0x1cf8=function(_0x1cf889,_0x2c21e8){_0x1cf889=_0x1cf889-0x73;let _0x50d790=_0x61ce40[_0x1cf889];return _0x50d790;},_0x1cf8(_0x1fd5df,_0x375865);}exports[_0x381f18(0x8e)]=homeModule;
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.homeModule = void 0;
+const static_1 = __importDefault(require("@fastify/static"));
+const path_1 = require("path");
+const promises_1 = require("fs/promises");
+const homeModule = async function homeModule(instance) {
+    instance.register(static_1.default, {
+        root: (0, path_1.join)(process.cwd(), 'public'),
+        prefix: '/'
+    });
+    instance.get('/', async (req, reply) => {
+        if (req.session.authenticated) {
+            try {
+                const module = await (0, promises_1.readFile)((0, path_1.join)(process.cwd(), 'public/index.html'), 'utf-8');
+                if (module) {
+                    return reply.sendFile('index.html');
+                }
+            }
+            catch (error) {
+                throw new Error(error);
+            }
+        }
+        const { query: { returnURL, error } } = req;
+        if (error) {
+            return reply.type('text/html').send(`<p style='color: red'>${error}</p>
+                <a href='/login?returnURL=${returnURL ?? '/'}'>Login</a>`);
+        }
+        return reply.redirect('/login');
+    });
+};
+exports.homeModule = homeModule;

@@ -1,1 +1,20 @@
-'use strict';const _0xa7ffb9=_0x3e7d;(function(_0x4285d6,_0x22273d){const _0x400146=_0x3e7d,_0x1214aa=_0x4285d6();while(!![]){try{const _0x10ff4c=parseInt(_0x400146(0x139))/0x1+-parseInt(_0x400146(0x143))/0x2*(-parseInt(_0x400146(0x13b))/0x3)+-parseInt(_0x400146(0x134))/0x4+parseInt(_0x400146(0x13c))/0x5+parseInt(_0x400146(0x135))/0x6+parseInt(_0x400146(0x131))/0x7+-parseInt(_0x400146(0x132))/0x8*(parseInt(_0x400146(0x133))/0x9);if(_0x10ff4c===_0x22273d)break;else _0x1214aa['push'](_0x1214aa['shift']());}catch(_0x308c92){_0x1214aa['push'](_0x1214aa['shift']());}}}(_0x4da1,0x8b8c2));var __importDefault=this&&this[_0xa7ffb9(0x142)]||function(_0x1bbfad){const _0xc8577c=_0xa7ffb9;return _0x1bbfad&&_0x1bbfad[_0xc8577c(0x13f)]?_0x1bbfad:{'default':_0x1bbfad};};Object[_0xa7ffb9(0x13a)](exports,_0xa7ffb9(0x13f),{'value':!![]});function _0x3e7d(_0xbb9ed3,_0x3e2c17){const _0x4da1fc=_0x4da1();return _0x3e7d=function(_0x3e7d8b,_0x32cb6d){_0x3e7d8b=_0x3e7d8b-0x130;let _0x54593a=_0x4da1fc[_0x3e7d8b];return _0x54593a;},_0x3e7d(_0xbb9ed3,_0x3e2c17);}function _0x4da1(){const _0xe3d7c0=['1252jGmVOt','heSZo','1738058KFnWwz','144BBIolM','611793knaYsv','2294848vRZmuW','331410ctSCjd','@fastify/cookie','uzGFB','register','1040945WXuuLa','defineProperty','1620dudfeM','3431850Wxtzzc','default','7c9ee7ebeee9d648c2fbc327ce8c0d4b16f6fb6473d8e9dbbb5e14e744d6ed7a','__esModule','fastify-plugin','info','__importDefault'];_0x4da1=function(){return _0xe3d7c0;};return _0x4da1();}const session_1=__importDefault(require('@fastify/session')),fastify_plugin_1=__importDefault(require(_0xa7ffb9(0x140))),cookie_1=__importDefault(require(_0xa7ffb9(0x136))),sessionPlugin=async(_0x449637,_0x1d49ad)=>{const _0x256ebb=_0xa7ffb9,_0x3966c2={'heSZo':_0x256ebb(0x13e),'uzGFB':'Registered\x20Session\x20Plugin.'};await _0x449637[_0x256ebb(0x138)](cookie_1[_0x256ebb(0x13d)]),await _0x449637[_0x256ebb(0x138)](session_1[_0x256ebb(0x13d)],{'secret':_0x3966c2[_0x256ebb(0x130)],'cookie':{'httpOnly':!![],'secure':![]}}),_0x449637['log'][_0x256ebb(0x141)](_0x3966c2[_0x256ebb(0x137)]);};exports[_0xa7ffb9(0x13d)]=(0x0,fastify_plugin_1[_0xa7ffb9(0x13d)])(sessionPlugin);
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const session_1 = __importDefault(require("@fastify/session"));
+const fastify_plugin_1 = __importDefault(require("fastify-plugin"));
+const cookie_1 = __importDefault(require("@fastify/cookie"));
+const sessionPlugin = async (instance, _option) => {
+    await instance.register(cookie_1.default);
+    await instance.register(session_1.default, {
+        secret: '7c9ee7ebeee9d648c2fbc327ce8c0d4b16f6fb6473d8e9dbbb5e14e744d6ed7a',
+        cookie: {
+            httpOnly: true,
+            secure: false
+        }
+    });
+    instance.log.info("Registered Session Plugin.");
+};
+exports.default = (0, fastify_plugin_1.default)(sessionPlugin);

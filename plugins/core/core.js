@@ -1,1 +1,27 @@
-'use strict';const _0x333947=_0x5ac9;(function(_0x25e721,_0x3dbe2d){const _0x382495=_0x5ac9,_0x3f60f3=_0x25e721();while(!![]){try{const _0x460a7d=parseInt(_0x382495(0xd2))/0x1*(-parseInt(_0x382495(0xcf))/0x2)+-parseInt(_0x382495(0xd8))/0x3+-parseInt(_0x382495(0xde))/0x4+-parseInt(_0x382495(0xdf))/0x5+parseInt(_0x382495(0xe0))/0x6+-parseInt(_0x382495(0xe4))/0x7+parseInt(_0x382495(0xd1))/0x8*(parseInt(_0x382495(0xd5))/0x9);if(_0x460a7d===_0x3dbe2d)break;else _0x3f60f3['push'](_0x3f60f3['shift']());}catch(_0xea666c){_0x3f60f3['push'](_0x3f60f3['shift']());}}}(_0x1c34,0xe680a));function _0x1c34(){const _0x55207c=['__importDefault','Registered\x20Core\x20Plugin.','../utils/register-multiple-plugins','6657616ZwmVRb','vgpNI','../authentication','fastify-plugin','homeModule','114992vnhvch','__esModule','60152kzAbJW','3ktKffh','../api','defineProperty','3348PAhVpD','../home/home','registerPlugins','1292376iasBKY','apiPlugin','default','info','../session/session','log','3635244NLoxWA','6327560DZPSaz','11254566CmMGLr'];_0x1c34=function(){return _0x55207c;};return _0x1c34();}var __importDefault=this&&this[_0x333947(0xe1)]||function(_0x1244e1){const _0x4d15f5=_0x333947;return _0x1244e1&&_0x1244e1[_0x4d15f5(0xd0)]?_0x1244e1:{'default':_0x1244e1};};Object[_0x333947(0xd4)](exports,_0x333947(0xd0),{'value':!![]});const session_1=__importDefault(require(_0x333947(0xdc))),client_1=__importDefault(require('../client/client')),authentication_1=__importDefault(require(_0x333947(0xcc))),fastify_plugin_1=__importDefault(require(_0x333947(0xcd))),api_1=require(_0x333947(0xd3)),home_1=require(_0x333947(0xd6)),request_decorators_1=__importDefault(require('../request-decorators')),register_multiple_plugins_1=__importDefault(require(_0x333947(0xe3))),corePlugin=async(_0x2cf23a,_0x48f893)=>{const _0x449af5=_0x333947,_0x46ee21={'vgpNI':_0x449af5(0xe2)},{issuerOptions:_0x30744b,apiOptions:_0x13c310}=_0x48f893;await _0x2cf23a['register'](register_multiple_plugins_1[_0x449af5(0xda)]),await _0x2cf23a[_0x449af5(0xd7)]([{'plugin':session_1[_0x449af5(0xda)]},{'plugin':request_decorators_1[_0x449af5(0xda)]},{'plugin':client_1['default'],'options':{'issuerOptions':_0x30744b}},{'plugin':authentication_1[_0x449af5(0xda)]},{'plugin':home_1[_0x449af5(0xce)]},{'plugin':api_1[_0x449af5(0xd9)],'options':{'apiOptions':_0x13c310}}]),_0x2cf23a[_0x449af5(0xdd)][_0x449af5(0xdb)](_0x46ee21[_0x449af5(0xcb)]);};function _0x5ac9(_0x13e0e4,_0x21efa5){const _0x1c3470=_0x1c34();return _0x5ac9=function(_0x5ac91e,_0x4bb798){_0x5ac91e=_0x5ac91e-0xcb;let _0x17bb2d=_0x1c3470[_0x5ac91e];return _0x17bb2d;},_0x5ac9(_0x13e0e4,_0x21efa5);}exports[_0x333947(0xda)]=(0x0,fastify_plugin_1['default'])(corePlugin);
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const session_1 = __importDefault(require("../session/session"));
+const client_1 = __importDefault(require("../client/client"));
+const authentication_1 = __importDefault(require("../authentication"));
+const fastify_plugin_1 = __importDefault(require("fastify-plugin"));
+const api_1 = require("../api");
+const home_1 = require("../home/home");
+const request_decorators_1 = __importDefault(require("../request-decorators"));
+const register_multiple_plugins_1 = __importDefault(require("../utils/register-multiple-plugins"));
+const corePlugin = async (instance, options) => {
+    const { issuerOptions, apiOptions } = options;
+    await instance.register(register_multiple_plugins_1.default);
+    await instance.registerPlugins([
+        { plugin: session_1.default },
+        { plugin: request_decorators_1.default },
+        { plugin: client_1.default, options: { issuerOptions } },
+        { plugin: authentication_1.default },
+        { plugin: home_1.homeModule },
+        { plugin: api_1.apiPlugin, options: { apiOptions } }
+    ]);
+    instance.log.info("Registered Core Plugin.");
+};
+exports.default = (0, fastify_plugin_1.default)(corePlugin);

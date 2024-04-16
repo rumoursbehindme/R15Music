@@ -1,1 +1,126 @@
-'use strict';const _0x1fa119=_0x2f78;(function(_0x32199e,_0x58a810){const _0x1fe2c1=_0x2f78,_0x29423a=_0x32199e();while(!![]){try{const _0x3ea917=parseInt(_0x1fe2c1(0x16d))/0x1*(-parseInt(_0x1fe2c1(0x1aa))/0x2)+parseInt(_0x1fe2c1(0x1bd))/0x3*(-parseInt(_0x1fe2c1(0x195))/0x4)+-parseInt(_0x1fe2c1(0x1a9))/0x5+-parseInt(_0x1fe2c1(0x1a1))/0x6*(-parseInt(_0x1fe2c1(0x196))/0x7)+-parseInt(_0x1fe2c1(0x1a3))/0x8+parseInt(_0x1fe2c1(0x1b9))/0x9*(-parseInt(_0x1fe2c1(0x1b8))/0xa)+parseInt(_0x1fe2c1(0x181))/0xb;if(_0x3ea917===_0x58a810)break;else _0x29423a['push'](_0x29423a['shift']());}catch(_0x62a898){_0x29423a['push'](_0x29423a['shift']());}}}(_0x5647,0x98339));function _0x2f78(_0x2b4b31,_0xd1caef){const _0x5647b4=_0x5647();return _0x2f78=function(_0x2f78b4,_0x33851b){_0x2f78b4=_0x2f78b4-0x16c;let _0xc15070=_0x5647b4[_0x2f78b4];return _0xc15070;},_0x2f78(_0x2b4b31,_0xd1caef);}function _0x5647(){const _0x3bb765=['setDate','pdrXC','getUTCFullYear','getMinutes','getUTCMonth','getMonth','getDateBySeconds','QYVcH','getDate','__esModule','4DhcOav','8491lGhkxf','hmkGB','getDaysDifference','isValidDate','mpnKO','JcxNp','toLocaleString','dUWHK','round','getCurrentDateDifference','getPreviousYear','5124PKebde','PsQVx','2190320mcZEtU','daYGT','convertWCFDateToUTC','PmuSw','DXFfG','getWeekDay','2426200NueEDj','9076erxYvO','NbQYZ','getStringFormattedDate','now','getNextYear','getUTCHours','padStart','getFullYear','getHours','toString','PUijj','setMinutes','getSeconds','length','290hYRjBJ','246447kcagPD','addDays','getUTCMinutes','floor','2078805uzlYCy','qVAuE','getLogFormattedDate','tYaxQ','131rZbkLh','dd/mm/yyyy','CfOyD','addYears','abs','yyyy/mm/dd','utzjH','defineProperty','getUTCDate','KQhNx','kSLTo','XtYKx','toLocaleTimeString','EksAG','getDay','getTimeZone','getMilliseconds','en-US','getUTCSeconds','getTime','26708715rrjbSz','addSeconds','Upcoming\x20Maintenance\x20:\x20','match','addMinutes','nqCwH','setFullYear','long','/Date(','tAqXO'];_0x5647=function(){return _0x3bb765;};return _0x5647();}Object[_0x1fa119(0x174)](exports,_0x1fa119(0x194),{'value':!![]}),exports['DateHelper']=void 0x0;const defaultLocale=_0x1fa119(0x17e);class DateHelper{static['getFormattedDate'](){const _0x2898a7=_0x1fa119;return _0x2898a7(0x189)+Date[_0x2898a7(0x1ad)]()+')/';}static[_0x1fa119(0x191)](_0x485839){const _0x3317c0=_0x1fa119,_0x39ca21={'kSLTo':function(_0x2ad432,_0x33dc64){return _0x2ad432*_0x33dc64;}};return new Date(_0x39ca21[_0x3317c0(0x177)](_0x485839,0x3e8));}static[_0x1fa119(0x19f)](_0x36c997){const _0x3420c8=_0x1fa119,_0x32ea10={'DXFfG':function(_0x3d0a01,_0x1d50f5){return _0x3d0a01/_0x1d50f5;},'PsQVx':function(_0x4c859f,_0x3363fd){return _0x4c859f-_0x3363fd;}};return Math[_0x3420c8(0x1bc)](_0x32ea10[_0x3420c8(0x1a7)](_0x32ea10[_0x3420c8(0x1a2)](_0x36c997,Date['now']()),0x3e8));}static[_0x1fa119(0x1ae)](_0x2c2482=new Date()){const _0x3b67e3={'OJbsT':function(_0x1faf7c,_0x2ca9c3){return _0x1faf7c+_0x2ca9c3;}};return new Date(_0x2c2482['setFullYear'](_0x3b67e3['OJbsT'](_0x2c2482['getFullYear'](),0x1)));}static[_0x1fa119(0x1a0)](_0x1c5c58=new Date()){const _0x184017=_0x1fa119,_0x1fcc44={'qVAuE':function(_0x479baf,_0x10cb42){return _0x479baf-_0x10cb42;}};return new Date(_0x1c5c58[_0x184017(0x187)](_0x1fcc44[_0x184017(0x1be)](_0x1c5c58['getFullYear'](),0x1)));}static[_0x1fa119(0x170)](_0x2be261,_0x401450=new Date()){const _0x333016=_0x1fa119,_0x5eacee={'KQhNx':function(_0x9a5b11,_0x4908a3){return _0x9a5b11+_0x4908a3;}};return new Date(_0x401450['setFullYear'](_0x5eacee[_0x333016(0x176)](_0x401450[_0x333016(0x1b1)](),_0x2be261)));}static[_0x1fa119(0x185)](_0x550854,_0x240172=new Date()){const _0x16d9da=_0x1fa119,_0x2b29b1={'XtYKx':function(_0x39c641,_0x17cef3){return _0x39c641+_0x17cef3;}};return new Date(_0x240172[_0x16d9da(0x1b5)](_0x2b29b1[_0x16d9da(0x178)](_0x240172[_0x16d9da(0x18e)](),_0x550854)));}static[_0x1fa119(0x182)](_0x59c1dc,_0x5065f3=new Date()){const _0x294800=_0x1fa119,_0x56439a={'daYGT':function(_0xa673f3,_0x425cff){return _0xa673f3+_0x425cff;}};return new Date(_0x5065f3['setSeconds'](_0x56439a[_0x294800(0x1a4)](_0x5065f3[_0x294800(0x1b6)](),_0x59c1dc)));}static[_0x1fa119(0x1ba)](_0x2e7065,_0x293530=new Date()){const _0x420be1=_0x1fa119,_0x3d64ad={'cnvUH':function(_0x413ad3,_0x3cf55f){return _0x413ad3+_0x3cf55f;}};return new Date(_0x293530[_0x420be1(0x18b)](_0x3d64ad['cnvUH'](_0x293530['getDate'](),_0x2e7065)));}static[_0x1fa119(0x175)](_0x2b8b3b){const _0x303796=_0x1fa119,_0x301c1a=_0x2b8b3b?new Date(_0x2b8b3b):new Date();return new Date(Date['UTC'](_0x301c1a[_0x303796(0x18d)](),_0x301c1a[_0x303796(0x18f)](),_0x301c1a[_0x303796(0x175)](),_0x301c1a[_0x303796(0x1af)](),_0x301c1a[_0x303796(0x1bb)](),_0x301c1a[_0x303796(0x17f)](),_0x301c1a[_0x303796(0x17d)]()));}static[_0x1fa119(0x198)](_0x47f32a,_0x4fd37e){const _0x568e07=_0x1fa119,_0x1bb33c={'tAqXO':function(_0x12aaa7,_0x5ef21c){return _0x12aaa7*_0x5ef21c;},'PmuSw':function(_0x26a7a5,_0x1e42f5){return _0x26a7a5-_0x1e42f5;}},_0x4c29ce=_0x1bb33c[_0x568e07(0x18a)](_0x1bb33c['tAqXO'](_0x1bb33c[_0x568e07(0x18a)](0x18,0x3c),0x3c),0x3e8);return Math[_0x568e07(0x19e)](Math[_0x568e07(0x171)](_0x1bb33c[_0x568e07(0x1a6)](_0x47f32a[_0x568e07(0x180)](),_0x4fd37e[_0x568e07(0x180)]())/_0x4c29ce));}static[_0x1fa119(0x1a8)](_0x5618c3,_0x102155=defaultLocale){const _0x387e9d=_0x1fa119,_0x395c79={'lvGKh':'long'};return _0x5618c3[_0x387e9d(0x19c)](_0x102155,{'weekday':_0x395c79['lvGKh']});}static[_0x1fa119(0x17b)](_0x5718fd,_0x5319a2=defaultLocale){const _0x596b8d=_0x1fa119,_0x363ad9={'PUijj':'numeric'};return _0x5718fd['toLocaleString'](_0x5319a2,{'day':_0x363ad9[_0x596b8d(0x1b4)]});}static[_0x1fa119(0x190)](_0x538e79,_0x2292e3=defaultLocale){const _0x42c5a0=_0x1fa119,_0x17eb29={'NbQYZ':_0x42c5a0(0x188)};return _0x538e79[_0x42c5a0(0x19c)](_0x2292e3,{'month':_0x17eb29[_0x42c5a0(0x1ab)]});}static[_0x1fa119(0x180)](_0x5bf56d){const _0x3c8b9c=_0x1fa119;return _0x5bf56d[_0x3c8b9c(0x179)]();}static[_0x1fa119(0x17c)](_0x4c101a,_0x2b6850=defaultLocale){const _0x5186e4=_0x1fa119,_0x39bc53={'tYaxQ':_0x5186e4(0x188)};try{return _0x4c101a['toLocaleDateString'](_0x2b6850,{'timeZoneName':_0x39bc53[_0x5186e4(0x16c)]})['split'](',')[0x1];}catch{return'';}}static[_0x1fa119(0x199)](_0x3f7f16){const _0x531fba=_0x1fa119,_0x11bcc5={'pdrXC':function(_0x5640f1,_0x4d8202){return _0x5640f1 instanceof _0x4d8202;},'mpnKO':function(_0x5e5c2a,_0x5b34e5){return _0x5e5c2a(_0x5b34e5);}},_0x28a316=new Date(_0x3f7f16);return _0x11bcc5[_0x531fba(0x18c)](_0x28a316,Date)&&!_0x11bcc5[_0x531fba(0x19a)](isNaN,_0x28a316);}static[_0x1fa119(0x1bf)](_0x335440=new Date()){const _0xc60610=_0x1fa119,_0x504eb8=_0x335440[_0xc60610(0x1b1)]()+'-'+(_0x335440[_0xc60610(0x190)]()+0x1)[_0xc60610(0x1b3)]()[_0xc60610(0x1b0)](0x2,'0')+'-'+_0x335440['getDate']()[_0xc60610(0x1b3)]()['padStart'](0x2,'0'),_0x3c5ec0=_0x335440[_0xc60610(0x1b2)]()+':'+_0x335440['getMinutes']()+':'+_0x335440[_0xc60610(0x1b6)]()+'.'+_0x335440[_0xc60610(0x17d)]();return _0x504eb8+'\x20'+_0x3c5ec0;}static ['getDateAndDurationContent']=(_0x233a79,_0x16adc2)=>{const _0x3ba66c=_0x1fa119,_0x4f84ad={'QYVcH':function(_0x3016b3,_0x3dbe1b){return _0x3016b3(_0x3dbe1b);},'utzjH':function(_0x5ae419,_0x82ff50){return _0x5ae419+_0x82ff50;}},{getWeekDay:_0x349353,getMonth:_0x5987e5,getDay:_0x51c03c,getTime:_0x1bee46}=this,_0x487836=_0x3ba66c(0x183)+_0x349353(_0x233a79)+',\x20'+_0x4f84ad[_0x3ba66c(0x192)](_0x5987e5,_0x233a79)+'\x20'+_0x4f84ad[_0x3ba66c(0x192)](_0x51c03c,_0x233a79)+'\x20'+_0x1bee46(_0x233a79),_0x36ee27=_0x16adc2?',\x20for\x20'+_0x16adc2+'\x20hour.':'.';return _0x4f84ad[_0x3ba66c(0x173)](_0x487836,_0x36ee27);};static [_0x1fa119(0x1a5)]=_0x15f729=>{const _0x829099=_0x1fa119,_0x27484d={'JcxNp':function(_0x2744be,_0x3560fa){return _0x2744be===_0x3560fa;},'CfOyD':function(_0x56f8a0,_0x78171e){return _0x56f8a0(_0x78171e);},'dUWHK':function(_0x56847b,_0x2dae8e){return _0x56847b+_0x2dae8e;}},_0x40e484=/\/Date\((\d+)([+-]\d+)\)\//,_0x54d586=_0x15f729[_0x829099(0x184)](_0x40e484);if(_0x54d586&&_0x27484d[_0x829099(0x19b)](_0x54d586[_0x829099(0x1b7)],0x3)){const _0x47ad3e=_0x27484d[_0x829099(0x16f)](Number,_0x54d586[0x1]),_0xc5ad5e=Number(_0x54d586[0x2]),_0x2bb868=this[_0x829099(0x175)](_0x27484d[_0x829099(0x19d)](_0x47ad3e,_0xc5ad5e));return _0x2bb868;}};static [_0x1fa119(0x1ac)]=(_0x33be05,_0x361c9d=_0x1fa119(0x16e))=>{const _0x2791e5=_0x1fa119,_0x5f33a7={'nqCwH':'dd/mm/yyyy','hmkGB':'mm/dd/yyyy','EksAG':_0x2791e5(0x172)},_0x53c2e9=_0x33be05[_0x2791e5(0x193)](),_0x4ebd9c=this['getMonth'](_0x33be05),_0x2001f6=_0x33be05['getFullYear']();switch(_0x361c9d){case _0x5f33a7[_0x2791e5(0x186)]:return _0x53c2e9+'\x20'+_0x4ebd9c+'\x20'+_0x2001f6;case _0x5f33a7[_0x2791e5(0x197)]:return _0x4ebd9c+'\x20'+_0x53c2e9+'\x20'+_0x2001f6;case _0x5f33a7[_0x2791e5(0x17a)]:return _0x2001f6+'\x20'+_0x4ebd9c+'\x20'+_0x53c2e9;default:return _0x53c2e9+'\x20'+_0x4ebd9c+'\x20'+_0x2001f6;}};}exports['DateHelper']=DateHelper;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateHelper = void 0;
+const defaultLocale = 'en-US';
+// TODO: Implement getDate as feature to getStringFormattedDate method
+// interface IGetDateAs {
+//     day: 'string' | 'number';
+//     month: 'string' | 'number';
+//     year: 'string' | 'number';
+// }
+// const defaultGetDateAsOptions: IGetDateAs = {
+//     day: 'number',
+//     month: 'number',
+//     year: 'number'
+// };
+class DateHelper {
+    static getFormattedDate() {
+        return `/Date(${Date.now()})/`;
+    }
+    /**
+     * creates a new date with passed seconds.
+     * it will add this seconds to 1st Jan 1970 and returns the Date
+     * ex: if seconds is 31536000(1 year) then the return date will be '1st Jan 1971'
+     * @param seconds
+     * @returns Date
+     */
+    static getDateBySeconds(seconds) {
+        return new Date(seconds * 1000);
+    }
+    /**
+     *
+     * @param date
+     * @returns seconds
+     */
+    static getCurrentDateDifference(date) {
+        return Math.floor((date - Date.now()) / 1000);
+    }
+    static getNextYear(date = new Date()) {
+        return new Date(date.setFullYear(date.getFullYear() + 1));
+    }
+    static getPreviousYear(date = new Date()) {
+        return new Date(date.setFullYear(date.getFullYear() - 1));
+    }
+    static addYears(number, date = new Date()) {
+        return new Date(date.setFullYear(date.getFullYear() + number));
+    }
+    static addMinutes(number, date = new Date()) {
+        return new Date(date.setMinutes(date.getMinutes() + number));
+    }
+    static addSeconds(addTimeInSeconds, date = new Date()) {
+        return new Date(date.setSeconds(date.getSeconds() + addTimeInSeconds));
+    }
+    static addDays(number, date = new Date()) {
+        return new Date(date.setDate(date.getDate() + number));
+    }
+    /*TODO: This function needs to be deprecated */
+    static getUTCDate(input) {
+        const date = input ? new Date(input) : new Date();
+        return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds(), date.getMilliseconds()));
+    }
+    static getDaysDifference(fromDate, toDate) {
+        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / oneDay));
+    }
+    static getWeekDay(date, locale = defaultLocale) {
+        return date.toLocaleString(locale, { weekday: 'long' });
+    }
+    static getDay(date, locale = defaultLocale) {
+        return date.toLocaleString(locale, { day: 'numeric' });
+    }
+    static getMonth(date, locale = defaultLocale) {
+        return date.toLocaleString(locale, { month: 'long' });
+    }
+    static getTime(date) {
+        return date.toLocaleTimeString();
+    }
+    static getTimeZone(date, locale = defaultLocale) {
+        try {
+            return date.toLocaleDateString(locale, { timeZoneName: 'long' }).split(',')[1];
+        }
+        catch {
+            return '';
+        }
+    }
+    static isValidDate(date) {
+        const d = new Date(date);
+        return (d instanceof Date && !isNaN(d));
+    }
+    static getLogFormattedDate(now = new Date()) {
+        const date = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;
+        const time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}.${now.getMilliseconds()}`;
+        return `${date} ${time}`;
+    }
+    static getDateAndDurationContent = (maintenanceDate, maintenanceLength) => {
+        const { getWeekDay, getMonth, getDay, getTime } = this;
+        const upComingMaintenance = `Upcoming Maintenance : ${getWeekDay(maintenanceDate)}, ${getMonth(maintenanceDate)} ${getDay(maintenanceDate)} ${getTime(maintenanceDate)}`;
+        const maintenanceLengthcontent = maintenanceLength ? `, for ${maintenanceLength} hour.` : '.';
+        return upComingMaintenance + maintenanceLengthcontent;
+    };
+    static convertWCFDateToUTC = (inputDate) => {
+        const regex = /\/Date\((\d+)([+-]\d+)\)\//;
+        const matchRegex = inputDate.match(regex);
+        if (matchRegex && matchRegex.length === 3) {
+            const timestamp = Number(matchRegex[1]);
+            const offset = Number(matchRegex[2]);
+            const date = this.getUTCDate(timestamp + offset);
+            return date;
+        }
+    };
+    static getStringFormattedDate = (date, format = 'dd/mm/yyyy') => {
+        const day = date.getDate();
+        const month = this.getMonth(date);
+        const year = date.getFullYear();
+        switch (format) {
+            case 'dd/mm/yyyy':
+                return `${day} ${month} ${year}`;
+            case 'mm/dd/yyyy':
+                return `${month} ${day} ${year}`;
+            case 'yyyy/mm/dd':
+                return `${year} ${month} ${day}`;
+            default:
+                return `${day} ${month} ${year}`;
+        }
+    };
+}
+exports.DateHelper = DateHelper;

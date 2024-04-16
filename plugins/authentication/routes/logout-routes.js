@@ -1,1 +1,12 @@
-'use strict';const _0x593bf9=_0x46fe;(function(_0x583b4a,_0x448e28){const _0x4456b9=_0x46fe,_0x51bf6c=_0x583b4a();while(!![]){try{const _0x24a813=parseInt(_0x4456b9(0x141))/0x1+-parseInt(_0x4456b9(0x147))/0x2+-parseInt(_0x4456b9(0x148))/0x3+-parseInt(_0x4456b9(0x143))/0x4+-parseInt(_0x4456b9(0x14f))/0x5+-parseInt(_0x4456b9(0x13e))/0x6+parseInt(_0x4456b9(0x14b))/0x7;if(_0x24a813===_0x448e28)break;else _0x51bf6c['push'](_0x51bf6c['shift']());}catch(_0x550c33){_0x51bf6c['push'](_0x51bf6c['shift']());}}}(_0x1d0a,0xbaba0));function _0x46fe(_0x1d012f,_0x5487c8){const _0x1d0ab8=_0x1d0a();return _0x46fe=function(_0x46fecf,_0x1630c6){_0x46fecf=_0x46fecf-0x13e;let _0x4674cc=_0x1d0ab8[_0x46fecf];return _0x4674cc;},_0x46fe(_0x1d012f,_0x5487c8);}Object['defineProperty'](exports,_0x593bf9(0x140),{'value':!![]}),exports[_0x593bf9(0x144)]=void 0x0;const requires_authenticated_1=require('../../../common/prehandlers/requires-authenticated');function _0x1d0a(){const _0x44cd9a=['get','requiresAuthenticated','25458139efpQLU','redirect','destroy','XNBgf','2420340WDdYxa','session','1835778aqOMVh','addHook','__esModule','478922DavpdN','NDPgF','2127936UCLrZi','logoutRoutes','preHandler','/logout','1507298vKlbfo','3825909qqfikg'];_0x1d0a=function(){return _0x44cd9a;};return _0x1d0a();}async function logoutRoutes(_0x5836a4){const _0x3ef31f=_0x593bf9,_0xbad86e={'NDPgF':_0x3ef31f(0x145),'XNBgf':_0x3ef31f(0x146)};_0x5836a4[_0x3ef31f(0x13f)](_0xbad86e[_0x3ef31f(0x142)],requires_authenticated_1[_0x3ef31f(0x14a)]),_0x5836a4[_0x3ef31f(0x149)](_0xbad86e[_0x3ef31f(0x14e)],async(_0x49f6b7,_0x3ea668)=>{const _0x319ea2=_0x3ef31f;return await _0x49f6b7[_0x319ea2(0x150)][_0x319ea2(0x14d)](),_0x3ea668[_0x319ea2(0x14c)]('/');});}exports['logoutRoutes']=logoutRoutes;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.logoutRoutes = void 0;
+const requires_authenticated_1 = require("../../../common/prehandlers/requires-authenticated");
+async function logoutRoutes(instance) {
+    instance.addHook('preHandler', requires_authenticated_1.requiresAuthenticated);
+    instance.get('/logout', async (req, reply) => {
+        await req.session.destroy();
+        return reply.redirect('/');
+    });
+}
+exports.logoutRoutes = logoutRoutes;

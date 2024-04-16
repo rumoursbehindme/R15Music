@@ -1,1 +1,12 @@
-'use strict';const _0x2e9ad4=_0x28b5;(function(_0x26d887,_0xa162e3){const _0x4a6341=_0x28b5,_0x4df9a7=_0x26d887();while(!![]){try{const _0x2a2bb8=-parseInt(_0x4a6341(0x13e))/0x1*(-parseInt(_0x4a6341(0x132))/0x2)+-parseInt(_0x4a6341(0x136))/0x3*(parseInt(_0x4a6341(0x139))/0x4)+parseInt(_0x4a6341(0x137))/0x5*(parseInt(_0x4a6341(0x131))/0x6)+-parseInt(_0x4a6341(0x142))/0x7+parseInt(_0x4a6341(0x138))/0x8+-parseInt(_0x4a6341(0x141))/0x9*(-parseInt(_0x4a6341(0x13a))/0xa)+-parseInt(_0x4a6341(0x133))/0xb;if(_0x2a2bb8===_0xa162e3)break;else _0x4df9a7['push'](_0x4df9a7['shift']());}catch(_0x3ce150){_0x4df9a7['push'](_0x4df9a7['shift']());}}}(_0x489f,0x83d7f));function _0x28b5(_0x50dbd3,_0x35e3e4){const _0x489f2e=_0x489f();return _0x28b5=function(_0x28b5d2,_0x28d19b){_0x28b5d2=_0x28b5d2-0x131;let _0x1e76fa=_0x489f2e[_0x28b5d2];return _0x1e76fa;},_0x28b5(_0x50dbd3,_0x35e3e4);}Object[_0x2e9ad4(0x135)](exports,_0x2e9ad4(0x13d),{'value':!![]}),exports[_0x2e9ad4(0x13b)]=void 0x0;function _0x489f(){const _0x559eee=['1996744hWzIAx','5972QpXNIu','220lNwNEy','requiresAuthenticated','redirect','__esModule','187921WehytA','session','authenticated','170055dOrynQ','861413jAfQdK','752502YjakVI','4VBPkkK','2269960DwGZWQ','/?returnURL=','defineProperty','1353EboBcu','20GxTMqz'];_0x489f=function(){return _0x559eee;};return _0x489f();}const requiresAuthenticated=async function requiresAuthebticated(_0x46ad63,_0x141cbe){const _0x59e01a=_0x2e9ad4;if(_0x46ad63[_0x59e01a(0x13f)][_0x59e01a(0x140)])return;;const {url:_0x31703c}=_0x46ad63;return _0x141cbe[_0x59e01a(0x13c)](_0x59e01a(0x134)+_0x31703c+'&error=Please\x20authenticate\x20to\x20access\x20this\x20route:\x20'+_0x31703c);};exports[_0x2e9ad4(0x13b)]=requiresAuthenticated;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.requiresAuthenticated = void 0;
+const requiresAuthenticated = async function requiresAuthebticated(req, reply) {
+    if (req.session.authenticated) {
+        return;
+    }
+    ;
+    const { url } = req;
+    return reply.redirect(`/?returnURL=${url}&error=Please authenticate to access this route: ${url}`);
+};
+exports.requiresAuthenticated = requiresAuthenticated;

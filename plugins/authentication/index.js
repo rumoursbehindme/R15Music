@@ -1,1 +1,14 @@
-'use strict';const _0x37a402=_0x3009;(function(_0x3c0591,_0x1cb7e7){const _0x148548=_0x3009,_0x1cec58=_0x3c0591();while(!![]){try{const _0x5dbe08=-parseInt(_0x148548(0x1e1))/0x1*(parseInt(_0x148548(0x1e0))/0x2)+-parseInt(_0x148548(0x1ec))/0x3+parseInt(_0x148548(0x1e3))/0x4+parseInt(_0x148548(0x1ef))/0x5+-parseInt(_0x148548(0x1e4))/0x6+-parseInt(_0x148548(0x1e7))/0x7+parseInt(_0x148548(0x1ee))/0x8;if(_0x5dbe08===_0x1cb7e7)break;else _0x1cec58['push'](_0x1cec58['shift']());}catch(_0x248feb){_0x1cec58['push'](_0x1cec58['shift']());}}}(_0x3b31,0xac8ac));var __importDefault=this&&this['__importDefault']||function(_0x25cc25){const _0x4c2bd7=_0x3009;return _0x25cc25&&_0x25cc25[_0x4c2bd7(0x1e9)]?_0x25cc25:{'default':_0x25cc25};};Object['defineProperty'](exports,'__esModule',{'value':!![]});function _0x3009(_0x785387,_0x4c2304){const _0x3b3125=_0x3b31();return _0x3009=function(_0x300909,_0x5608af){_0x300909=_0x300909-0x1df;let _0x50c717=_0x3b3125[_0x300909];return _0x50c717;},_0x3009(_0x785387,_0x4c2304);}function _0x3b31(){const _0x535b31=['29870720uWtDeO','5222705MoZpTx','loginRoutes','8800KtaeXl','279kQkLxr','info','3008944CuFPJk','7816398UVQPxF','./routes','register','6223924kycDyU','default','__esModule','logoutRoutes','fastify-plugin','4213260TxPGNV','GFueB'];_0x3b31=function(){return _0x535b31;};return _0x3b31();}const fastify_plugin_1=__importDefault(require(_0x37a402(0x1eb))),routes_1=require(_0x37a402(0x1e5)),authenticationPlugin=async function authenticationModule(_0x4c5b78){const _0x541a03=_0x37a402,_0x445531={'GFueB':'Registered\x20Authentication\x20Plugin.'};await _0x4c5b78['register'](routes_1[_0x541a03(0x1df)]),await _0x4c5b78[_0x541a03(0x1e6)](routes_1[_0x541a03(0x1ea)]),_0x4c5b78['log'][_0x541a03(0x1e2)](_0x445531[_0x541a03(0x1ed)]);};exports['default']=(0x0,fastify_plugin_1[_0x37a402(0x1e8)])(authenticationPlugin);
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const fastify_plugin_1 = __importDefault(require("fastify-plugin"));
+const routes_1 = require("./routes");
+// Authorization code flow
+const authenticationPlugin = async function authenticationModule(instance) {
+    await instance.register(routes_1.loginRoutes);
+    await instance.register(routes_1.logoutRoutes);
+    instance.log.info("Registered Authentication Plugin.");
+};
+exports.default = (0, fastify_plugin_1.default)(authenticationPlugin);
