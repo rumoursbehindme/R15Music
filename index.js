@@ -21,11 +21,11 @@ const date_helper_1 = require("./common/utils/date-helper");
     });
     if (configurations) {
         await app.register(core_1.default, coreConfigurations);
-        app.listen({ port: process.env.PORT }, (err) => {
+        app.listen({ port }, (err) => {
             if (err)
                 throw err;
-            console.log(`Server is listening on ${process.env.port}`);
-            console.log(process.env.PORT)
+            console.log(`Server is listening on ${port}`);
+            console.log(port)
         });
     }
     else {
