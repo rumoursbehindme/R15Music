@@ -25,7 +25,7 @@ const date_helper_1 = require("./common/utils/date-helper");
             if (err)
                 throw err;
             console.log(`Server is listening on ${process.env.port}`);
-            console.log(process.env.port)
+            console.log(process.env.PORT)
         });
     }
     else {

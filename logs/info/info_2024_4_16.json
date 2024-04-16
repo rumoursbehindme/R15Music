@@ -40,4 +40,25 @@
 }{
   "time": "2024-04-16 19:34:24.293",
   "msg": "Server listening at http://127.0.0.1:54034"
+}{
+  "time": "2024-04-16 19:36:28.3",
+  "msg": "Registered Core Plugin."
+}{
+  "time": "2024-04-16 19:36:28.10",
+  "msg": "Registered Session Plugin."
+}{
+  "time": "2024-04-16 19:36:28.310",
+  "msg": "Registered Client Plugin."
+}{
+  "time": "2024-04-16 19:36:28.314",
+  "msg": "Registered Authentication Plugin."
+}{
+  "time": "2024-04-16 19:36:28.318",
+  "msg": "Registered API Plugin"
+}{
+  "time": "2024-04-16 19:36:28.328",
+  "msg": "Server listening at http://[::1]:54265"
+}{
+  "time": "2024-04-16 19:36:28.330",
+  "msg": "Server listening at http://127.0.0.1:54265"
 }
